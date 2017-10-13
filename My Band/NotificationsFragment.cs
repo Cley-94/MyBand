@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace My_Band
 {
-    public class IconTxtMsgFragment : Android.Support.V4.App.Fragment
+    public class NotificationsFragment : Android.Support.V4.App.Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -23,7 +23,7 @@ namespace My_Band
         {
             // Use this to return your custom view for this Fragment 
 
-            View view = inflater.Inflate(Resource.Layout.IconTxtMsgLayout, container, false);
+            View view = inflater.Inflate(Resource.Layout.NotificationsLayout, container, false);
             return view;
         }
     }

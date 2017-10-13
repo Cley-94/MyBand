@@ -20,9 +20,9 @@ namespace My_Band
     public class ActivitySignUp : Activity
     {
 
-        Button mBtnNext;
-        ImageView mBtnRegisterBack;
-        LinearLayout mLinearLayout;
+        private Button mBtnNext;
+        private ImageView mBtnRegisterBack;
+        private LinearLayout mLinearLayout;
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -33,15 +33,16 @@ namespace My_Band
             
             mBtnNext = FindViewById<Button>(Resource.Id.btnNext);
             mBtnNext.Click += mBtnNext_Click;
-
-
+            
             mLinearLayout = FindViewById<LinearLayout>(Resource.Id.RegisterLinearLayout);
             mLinearLayout.Click += mLinearLayout_Click;
+
             mBtnRegisterBack = FindViewById<ImageView>(Resource.Id.ivRegisterBack);
             mBtnRegisterBack.Click += mBtnRegisterBack_Click;
 
         }
 
+        
         private void mLinearLayout_Click(object sender, EventArgs e)
         {
             InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Activity.InputMethodService);
@@ -50,21 +51,90 @@ namespace My_Band
 
         private void mBtnNext_Click(object sender, EventArgs e)
         {
-            UserModel user = new UserModel()
+            string mEtEmail = FindViewById<EditText>(Resource.Id.etEmail).Text;
+            string mEtUserName = FindViewById<EditText>(Resource.Id.etUserName).Text;
+            string mEtPassword = FindViewById<EditText>(Resource.Id.etPassword).Text;
+            string mEtConfirmPassword = FindViewById<EditText>(Resource.Id.etConfirmPassword).Text;
+
+            TextView mTvRequiredEmail = FindViewById<TextView>(Resource.Id.tvRequiredEmail);
+            TextView mTvRequiredUsername = FindViewById<TextView>(Resource.Id.tvRequiredUsername);
+            TextView mTvRequiredPassword = FindViewById<TextView>(Resource.Id.tvRequiredPassword);
+            TextView mTvRequiredConfirmPassword = FindViewById<TextView>(Resource.Id.tvRequiredConfirmPassword);
+            bool v = true;
+
+            if (String.IsNullOrEmpty(mEtEmail))
             {
-                Email = FindViewById<EditText>(Resource.Id.etEmail).Text,
-                Name = FindViewById<EditText>(Resource.Id.etUserName).Text,
-                Password = FindViewById<EditText>(Resource.Id.etConfirmPassword).Text
-            };
+                v = false;
+                mTvRequiredEmail.Text = "Campo Obrigatório";
+                mTvRequiredEmail.SetTextColor(Android.Graphics.Color.Red);
+            }
+            else
+            {
+                mTvRequiredEmail.Text = "";
+            }
 
-            Intent intent = new Intent(this, typeof(ActivitySignUpOptional));
+
+            if (String.IsNullOrEmpty(mEtUserName))
+            {
+                v = false;
+                mTvRequiredUsername.Text = "Campo Obrigatório";
+                mTvRequiredUsername.SetTextColor(Android.Graphics.Color.Red);
+            }
+            else
+            {
+                mTvRequiredUsername.Text = "";
+            }
 
 
-            intent.PutExtra("user", JsonConvert.SerializeObject(user));
-            this.StartActivity(intent);
+            if (String.IsNullOrEmpty(mEtPassword))
+            {
+                v = false;
+                mTvRequiredPassword.Text = "Campo Obrigatório";
+                mTvRequiredPassword.SetTextColor(Android.Graphics.Color.Red);
+            }
+            else
+            {
+                mTvRequiredPassword.Text = "";
+            }
 
+
+            if (String.IsNullOrEmpty(mEtConfirmPassword))
+            {
+                v = false;
+                mTvRequiredConfirmPassword.Text = "Campo Obrigatório";
+                mTvRequiredConfirmPassword.SetTextColor(Android.Graphics.Color.Red);
+            }
+            else
+            {
+                mTvRequiredConfirmPassword.Text = "";
+            }
+
+
+            if (mEtConfirmPassword != mEtPassword)
+            {
+                v = false;
+                mTvRequiredConfirmPassword.Text = "Senhas Diferentes";
+                mTvRequiredConfirmPassword.SetTextColor(Android.Graphics.Color.Red);
+                return;
+            }
+            if (v == true)
+            {
+                UserModel user = new UserModel()
+                {
+                    Email = mEtEmail,
+                    Name = mEtUserName,
+                    Password = mEtPassword
+                };
+
+                Intent intent = new Intent(this, typeof(ActivitySignUpOptional));
+
+
+                intent.PutExtra("user", JsonConvert.SerializeObject(user));
+                this.StartActivity(intent);
+            }
+            
         }
-
+        
         private void mBtnRegisterBack_Click(object sender, EventArgs e)
         {
 

@@ -19,13 +19,13 @@ namespace My_Band.DataService
     public class DataServiceAPI
     {
         HttpClient client = new HttpClient();
+        private const string _urlBase = "http://XamarinWebAPI2.somee.com/XamarinWebAPI/api/Home";
 
         public async Task<List<UserModel>> GetUsersAsync()
         {
             try
             {
-                string url = "http://xamarinwebapi.somee.com/XamarinWebAPI/api/Home";
-                var response = await client.GetStringAsync(url);
+                var response = await client.GetStringAsync(_urlBase);
                 var users = JsonConvert.DeserializeObject<List<UserModel>>(response);
                 return users;
             }
@@ -38,13 +38,14 @@ namespace My_Band.DataService
         {
             try
             {
-                string url = "http://xamarinwebapi.somee.com/XamarinWebAPI/api/Home";
                 var data = JsonConvert.SerializeObject(user);
                 var content = new StringContent(data, Encoding.UTF8, "application/json");
 
+                string urlAddUser = _urlBase + "/post";
+
                 HttpResponseMessage response = null;
 
-                response = await client.PostAsync(url, content);
+                response = await client.PostAsync(urlAddUser, content);
 
                 if (!response.IsSuccessStatusCode)
                 {
@@ -64,14 +65,13 @@ namespace My_Band.DataService
 
         public async Task UpdateUser(UserModel user)
         {
-            string url = "http://xamarinwebapi.somee.com/XamarinWebAPI/api/Home";
-            var uri = new Uri(string.Format(url, user.ID));
+            var uri = new Uri(string.Format(_urlBase, user.ID));
 
             var data = JsonConvert.SerializeObject(user);
             var content = new StringContent(data, Encoding.UTF8, "application/json");
 
             HttpResponseMessage response = null;
-            response = await client.PutAsync(url, content);
+            response = await client.PutAsync(_urlBase, content);
             if (!response.IsSuccessStatusCode)
             {
                 throw new Exception("Erro ao atualizar o usuário!");
@@ -80,9 +80,31 @@ namespace My_Band.DataService
 
         public async Task DeleteUser(UserModel user)
         {
-            string url = "http://xamarinwebapi.somee.com/XamarinWebAPI/api/Home";
-            var uri = new Uri(string.Format(url, user.ID));
+            var uri = new Uri(string.Format(_urlBase, user.ID));
             await client.DeleteAsync(uri);
+        }
+        public async Task<Boolean> PostLogin(UserLoginModel userLogin)
+        {
+            try
+            {
+                string urlLogin = _urlBase + "/postlogin";
+
+                var data = JsonConvert.SerializeObject(userLogin);
+                var content = new StringContent(data, Encoding.UTF8, "application/json");
+                
+                HttpResponseMessage response = await client.PostAsync(urlLogin, content);
+                var responseContent = await response.Content.ReadAsStringAsync();
+
+                if(responseContent == "true")
+                    return true;
+                else
+                    return false;
+                
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
     }
 }

@@ -30,99 +30,128 @@
         android:orientation="vertical"
         android:id="@+id/llForm1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp">
+        android:layout_height="wrap_content">
         <ScrollView
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/svForm2">
-            <LinearLayout
-                android:orientation="vertical"
-                android:id="@+id/llForm2"
+            android:id="@+id/svForm2"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp">
+            <RelativeLayout
+                android:id="@+id/rlForm2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
                     android:text="Email"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView1"
+                    android:id="@+id/tvEmail"
                     android:textColor="#000000" />
+                <TextView
+                    android:textSize="10sp"
+                    android:layout_toRightOf="@id/tvEmail"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRequiredEmail" />
                 <EditText
+                    android:layout_below="@id/tvEmail"
                     android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etEmail"
                     android:textColor="#000000" />
                 <TextView
-                    android:text="Nome Completo"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView2"
-                    android:textColor="#000000" />
-                <EditText
-                    android:inputType="textPersonName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/etFullName"
-                    android:textColor="#000000" />
-                <TextView
+                    android:layout_below="@id/etEmail"
                     android:text="Nome de Usuário"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView2"
+                    android:id="@+id/tvUsername"
                     android:textColor="#000000" />
+                <TextView
+                    android:textSize="10sp"
+                    android:layout_toRightOf="@id/tvUsername"
+                    android:layout_below="@id/etEmail"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRequiredUsername" />
                 <EditText
+                    android:layout_below="@id/tvUsername"
                     android:inputType="textPersonName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etUserName"
                     android:textColor="#000000" />
                 <TextView
+                    android:layout_below="@id/etUserName"
                     android:text="Senha"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView2"
+                    android:id="@+id/tvPassword"
                     android:textColor="#000000" />
+                <TextView
+                    android:textSize="10sp"
+                    android:layout_toRightOf="@id/tvPassword"
+                    android:layout_below="@id/etUserName"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRequiredPassword" />
                 <EditText
+                    android:layout_below="@id/tvPassword"
                     android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etPassword"
                     android:textColor="#000000" />
                 <TextView
+                    android:layout_below="@id/etPassword"
                     android:text="Confirmar Senha"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView2"
+                    android:id="@+id/tvConfirmPassword"
                     android:textColor="#000000" />
+                <TextView
+                    android:textSize="10sp"
+                    android:layout_toRightOf="@id/tvConfirmPassword"
+                    android:layout_below="@id/etPassword"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRequiredConfirmPassword" />
                 <EditText
+                    android:layout_below="@id/tvConfirmPassword"
                     android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etConfirmPassword"
                     android:textColor="#000000" />
-            </LinearLayout>
+                <Button
+                    android:layout_below="@id/etConfirmPassword"
+                    android:text="Próximo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:id="@+id/btnNext"
+                    android:background="@drawable/buttonnextsignupstyle" />
+            </RelativeLayout>
         </ScrollView>
-        <Button
-            android:text="Próximo"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:textColor="#ffffff"
-            android:textSize="15sp"
-            android:id="@+id/btnNext"
-            android:background="@drawable/buttonnextsignupstyle" />
     </LinearLayout>
 </LinearLayout>

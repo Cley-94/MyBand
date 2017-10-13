@@ -20,16 +20,17 @@ namespace My_Band.Activities
     [Activity(Label = "ActivitySignUpOptional")]
     public class ActivitySignUpOptional : Activity
     {
-        DataServiceAPI dataService;
-        UserModel mUser;
-        AutoCompleteTextView mActvGenres;
-        EditText mEtState;
-        EditText mEtCity;
-        EditText mEtPhone;
-        EditText mEtAbout;
-        Button mBtnSubmit;
-        LinearLayout mLinearLayout;
-        ImageView mBtnRegisterOptionalBack;
+        private DataServiceAPI dataService;
+        private UserModel mUser;
+        private AutoCompleteTextView mActvGenres;
+        private string mEtState;
+        private string mEtCity;
+        private string mEtPhone;
+        private string mEtAbout;
+        private Button mBtnSubmit;
+        private LinearLayout mLinearLayout;
+        private ImageView mBtnRegisterOptionalBack;
+        private TextView mTvSkip;
 
         public ActivitySignUpOptional()
         {
@@ -42,13 +43,14 @@ namespace My_Band.Activities
 
             SetContentView(Resource.Layout.CadastroOpcional);
 
+            mTvSkip = FindViewById<TextView>(Resource.Id.tvSkip);
+            mTvSkip.Click += mTvSkip_Click;
+
             mBtnSubmit = FindViewById<Button>(Resource.Id.btnRegisterSubmit);
             mActvGenres = FindViewById<AutoCompleteTextView>(Resource.Id.actvGenres);
 
             mBtnRegisterOptionalBack = FindViewById<ImageView>(Resource.Id.ivRegisterOptionalBack);
             mBtnRegisterOptionalBack.Click += mBtnRegisterOptionalBack_Click;
-
-
 
             Stream seedDataStream = Assets.Open(@"WordList.txt");
             List<string> lines = new List<string>();
@@ -72,6 +74,35 @@ namespace My_Band.Activities
 
         }
 
+        private async void mTvSkip_Click(object sender, EventArgs e)
+        {
+
+            mUser = new UserModel();
+
+            mUser = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+
+            mUser.State = mEtState;
+            mUser.City = mEtCity;
+            mUser.Phone = mEtPhone;
+            mUser.About = mEtAbout;
+
+            Intent intent = new Intent(this, typeof(ActivityMainView));
+
+            intent.PutExtra("mUser", JsonConvert.SerializeObject(mUser));
+
+            var result = await dataService.AddUsersAsync(mUser);
+
+            if (result == true)
+            {
+                this.StartActivity(intent);
+                this.Finish();
+            }
+            else
+            {
+
+            }
+        }
+
         private void mLinearLayout_Click(object sender, EventArgs e)
         {
             InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Activity.InputMethodService);
@@ -81,19 +112,19 @@ namespace My_Band.Activities
         private async void mBtnSubmit_Click(object sender, EventArgs e)
         {
  
-            mEtState = FindViewById<EditText>(Resource.Id.etState);
-            mEtCity = FindViewById<EditText>(Resource.Id.etCity);
-            mEtPhone = FindViewById<EditText>(Resource.Id.etPhone);
-            mEtAbout = FindViewById<EditText>(Resource.Id.etAbout);
+            mEtState = FindViewById<EditText>(Resource.Id.etState).Text;
+            mEtCity = FindViewById<EditText>(Resource.Id.etCity).Text;
+            mEtPhone = FindViewById<EditText>(Resource.Id.etPhone).Text;
+            mEtAbout = FindViewById<EditText>(Resource.Id.etAbout).Text;
 
             mUser = new UserModel();
 
             mUser = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
             
-            mUser.State = mEtState.Text;
-            mUser.City = mEtCity.Text;
-            mUser.Phone = mEtPhone.Text;
-            mUser.About = mEtAbout.Text;
+            mUser.State = mEtState;
+            mUser.City = mEtCity;
+            mUser.Phone = mEtPhone;
+            mUser.About = mEtAbout;
             
 
 
@@ -109,7 +140,7 @@ namespace My_Band.Activities
             }
             else
             {
-
+                
             }
 
         }

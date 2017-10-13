@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="#000000">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Bandas da Semana"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:textColor="#e5e5e5"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView200" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/llBandsRank">
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1">
+            <TextView
+                android:text="Tool"
+                android:textColor="#e5e5e5"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvRank1" />
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                style="@style/CustomRatingBar"
+                android:id="@+id/rbRank1"
+                android:numStars="5"
+                android:stepSize="0.01"
+                android:isIndicator="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2">
+            <TextView
+                android:text="Anihilation"
+                android:textColor="#e5e5e5"
+                android:layout_alignParentLeft="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvRank2" />
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                style="@style/CustomRatingBar"
+                android:id="@+id/rbRank2"
+                android:numStars="5"
+                android:stepSize="0.01"
+                android:isIndicator="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3">
+            <TextView
+                android:text="CPM 44"
+                android:textColor="#e5e5e5"
+                android:layout_alignParentLeft="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvRank3" />
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                style="@style/CustomRatingBar"
+                android:id="@+id/rbRank3"
+                android:numStars="5"
+                android:stepSize="0.01"
+                android:isIndicator="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout4">
+            <TextView
+                android:text="Dark Rod"
+                android:textColor="#e5e5e5"
+                android:layout_alignParentLeft="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvRank4" />
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                style="@style/CustomRatingBar"
+                android:id="@+id/rbRank4"
+                android:numStars="5"
+                android:stepSize="0.01"
+                android:isIndicator="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout5">
+            <TextView
+                android:text="Node"
+                android:textColor="#e5e5e5"
+                android:layout_alignParentLeft="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvRank5" />
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                style="@style/CustomRatingBar"
+                android:id="@+id/rbRank5"
+                android:numStars="5"
+                android:stepSize="0.01"
+                android:isIndicator="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:text="Sugeridos para você"
+        android:textColor="#e5e5e5"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/textView5" />
+    <RelativeLayout
+        android:layout_height="120dp"
+        android:layout_width="match_parent"
+        android:id="@+id/llConteinerLikedBands">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hsvLikedBands">
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+                <ImageView
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp" />
+                <ImageView
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp" />
+                <ImageView
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp" />
+                <ImageView
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+    <TextView
+        android:text="O que há de novo"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#e5e5e5"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5" />
+    <RelativeLayout
+        android:layout_height="120dp"
+        android:layout_width="match_parent"
+        android:id="@+id/llConteinerLikedBands">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hsvLikedBands">
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+                <ImageView
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp" />
+                <ImageView
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp" />
+                <ImageView
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp" />
+                <ImageView
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+</LinearLayout>

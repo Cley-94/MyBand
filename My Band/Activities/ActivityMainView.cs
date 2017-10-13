@@ -14,6 +14,7 @@ using Android.Support.V4.View;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Support.V4.Widget;
+using My_Band.Activities;
 
 namespace My_Band
 {
@@ -22,12 +23,14 @@ namespace My_Band
     {
         DrawerLayout drawerLayout;
         TabLayout tabLayout;
+        //Button mBtnAddBand;
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Main);
-
+            
             drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 
             // Initialize toolbar
@@ -49,13 +52,23 @@ namespace My_Band
             drawerLayout.AddDrawerListener(drawerToggle);
             drawerToggle.SyncState();
 
-
             FnInitTabLayout();
             //Load default screen
             /*var ft = SupportFragmentManager.BeginTransaction();
             ft.AddToBackStack(null);
             ft.Add(Resource.Id.FrameLayout, new IconTextCallFragment());
             ft.Commit();*/
+
+            //Trata os eventos dos cliques editar perfil
+            /*mBtnAddBand = FindViewById<Button>(Resource.Id.btnAddBand);
+            mBtnAddBand.Click += mBtnEditProfile_Click;*/
+
+        }
+        //click do botão inserir banda
+        private void mBtnEditProfile_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(ActivityAddBand));
+            this.StartActivity(intent);
         }
 
         void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
@@ -82,9 +95,9 @@ namespace My_Band
             //Fragment array
             var fragments = new Android.Support.V4.App.Fragment[]
             {
-                new IconTextCallFragment(),
-                new IconTxtMsgFragment(),
-                new IconTextDataFragment(),
+                new HomeFragment(),
+                new NotificationsFragment(),
+                new UserProfileFragment(),
             };
             //Tab title array
             var titles = CharSequence.ArrayFromStringArray(new[] {
@@ -101,6 +114,7 @@ namespace My_Band
             //tabLayout.SetTabTextColors(
             FnSetIcons();
             //FnSetupTabIconsWithText ();
+
         }
         void FnSetIcons()
         {

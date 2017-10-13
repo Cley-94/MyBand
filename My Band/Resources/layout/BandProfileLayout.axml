@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="558.0dp"
+        android:id="@+id/linearLayout12"
+        android:layout_marginBottom="37.0dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1">
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="0.0dp"
+                android:id="@+id/imageView1" />
+            <TextView
+                android:text="Nome da Banda                 Seguidores"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="135.5dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textView14" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout4">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout5">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="289.5dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout3">
+                    <Button
+                        android:text="Seguir"
+                        android:layout_width="82.0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/button1"
+                        android:background="#1E90FF"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="12.0dp" />
+                    <ImageView
+                        android:src="@drawable/money"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/imageView2" />
+                    <RatingBar
+                        android:layout_width="129.0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/starRatingBar"
+                        android:layout_marginBottom="0.0dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:background="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout6">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout2">
+                <TextView
+                    android:text="Genêro"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#FFFFFF" />
+                <AutoCompleteTextView
+                    android:layout_width="280.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:id="@+id/autoCompleteTextView1" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout3">
+                <TextView
+                    android:text="Local"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView4"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#FFFFFF" />
+                <AutoCompleteTextView
+                    android:layout_width="280.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/autoCompleteTextView1" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout4">
+                <TextView
+                    android:text="E-mail"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView4"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#FFFFFF" />
+                <AutoCompleteTextView
+                    android:layout_width="284.0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/autoCompleteTextView2"
+                    android:layout_marginRight="268.5dp"
+                    android:layout_marginLeft="7dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout4">
+                <TextView
+                    android:text="Sobre"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView4"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#FFFFFF" />
+                <AutoCompleteTextView
+                    android:layout_width="284.0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/autoCompleteTextView2"
+                    android:layout_marginRight="268.5dp"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout7">
+            <TextView
+                android:text="Musicas da Banda"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textView5" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout8">
+            <TextView
+                android:text="1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textView6" />
+            <TextView
+                android:text="Overflow"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textView7" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout9">
+            <TextView
+                android:text="2"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/textView8" />
+            <TextView
+                android:text="Death From Above"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textView9" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout10">
+            <TextView
+                android:text="3"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/textView10" />
+            <TextView
+                android:text="Lateralus"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/textView11" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout11"
+            android:layout_marginBottom="86.0dp">
+            <TextView
+                android:text="4"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/textView12" />
+            <TextView
+                android:text="Bicho Papão"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textView13" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
