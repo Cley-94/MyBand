@@ -12,9 +12,11 @@ using Android.Widget;
 
 namespace My_Band.Models
 {
-    public class UserLoginModel
+    public class TokenModel
     {
-        public String username { get; set; }
-        public String password { get; set; }
+        public string Access_Token { get; set; }
+        public string Token_Type { get; set; }
+        public string Expires_In { get; set; }
+        public string Refresh_Token { get; set; }
     }
 }

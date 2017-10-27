@@ -3,7 +3,11 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#232E33">
+    android:background="#0c0414">
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"></ScrollView>
     <RelativeLayout
         android:id="@+id/rlProfileHeader"
         android:layout_width="match_parent"

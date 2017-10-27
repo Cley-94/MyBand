@@ -28,11 +28,11 @@ namespace My_Band
             RatingBar mRbRank3 = view.FindViewById<RatingBar>(Resource.Id.rbRank3);
             RatingBar mRbRank4 = view.FindViewById<RatingBar>(Resource.Id.rbRank4);
             RatingBar mRbRank5 = view.FindViewById<RatingBar>(Resource.Id.rbRank5);
-            mRbRank1.Rating = 4.8f;
+            mRbRank1.Rating = 5f;
             mRbRank2.Rating = 4.7f;
             mRbRank3.Rating = 4.5f;
             mRbRank4.Rating = 4.2f;
-            mRbRank5.Rating = 4.1f;
+            mRbRank5.Rating = 1.1f;
 
             return view;
         }

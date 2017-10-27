@@ -2284,11 +2284,11 @@ namespace My_Band
 			// aapt resource value: 0x7f020090
 			public const int notification_icon_background = 2130837648;
 			
-			// aapt resource value: 0x7f02009f
-			public const int notification_template_icon_bg = 2130837663;
+			// aapt resource value: 0x7f02009c
+			public const int notification_template_icon_bg = 2130837660;
 			
-			// aapt resource value: 0x7f0200a0
-			public const int notification_template_icon_low_bg = 2130837664;
+			// aapt resource value: 0x7f02009d
+			public const int notification_template_icon_low_bg = 2130837661;
 			
 			// aapt resource value: 0x7f020091
 			public const int notification_tile_bg = 2130837649;
@@ -2322,15 +2322,6 @@ namespace My_Band
 			
 			// aapt resource value: 0x7f02009b
 			public const int semImagem = 2130837659;
-			
-			// aapt resource value: 0x7f02009c
-			public const int sta = 2130837660;
-			
-			// aapt resource value: 0x7f02009d
-			public const int star = 2130837661;
-			
-			// aapt resource value: 0x7f02009e
-			public const int voltar = 2130837662;
 			
 			static Drawable()
 			{

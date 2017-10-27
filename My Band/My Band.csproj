@@ -105,10 +105,11 @@
     <Compile Include="Activities\ActivitySignUp.cs" />
     <Compile Include="Activities\ActivitySignUpOptional.cs" />
     <Compile Include="DataService\DataServiceAPI.cs" />
-    <Compile Include="HomeFragment.cs" />
+    <Compile Include="Fragments\HomeFragment.cs" />
+    <Compile Include="Models\TokenModel.cs" />
     <Compile Include="Models\UserLoginModel.cs" />
-    <Compile Include="UserProfileFragment.cs" />
-    <Compile Include="NotificationsFragment.cs" />
+    <Compile Include="Fragments\UserProfileFragment.cs" />
+    <Compile Include="Fragments\NotificationsFragment.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -145,7 +146,9 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\PerfilBanda.axml" />
     <AndroidResource Include="Resources\layout\RatingLayout.axml" />
-    <AndroidResource Include="Resources\layout\HomeLayout.axml" />
+    <AndroidResource Include="Resources\layout\HomeLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\BandProfileLayout.axml" />
   </ItemGroup>
   <ItemGroup>
@@ -281,18 +284,12 @@
     <AndroidResource Include="Resources\drawable\rock.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\star.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\menu\navmenu.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\colors.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\Style.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ButtonsUserProfile.xml" />
@@ -347,12 +344,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\money.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\sta.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\voltar.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ratingbar.xml" />

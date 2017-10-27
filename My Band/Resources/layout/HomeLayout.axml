@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:background="#000000">
+    android:background="#0c0414">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -48,7 +48,7 @@
                 style="@style/CustomRatingBar"
                 android:id="@+id/rbRank1"
                 android:numStars="5"
-                android:stepSize="0.01"
+                android:stepSize="1.0"
                 android:isIndicator="true" />
         </RelativeLayout>
         <RelativeLayout

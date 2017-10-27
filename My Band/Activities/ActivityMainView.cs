@@ -15,6 +15,8 @@ using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Support.V4.Widget;
 using My_Band.Activities;
+using Newtonsoft.Json;
+using My_Band.Models;
 
 namespace My_Band
 {
@@ -30,7 +32,10 @@ namespace My_Band
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Main);
-            
+
+            var token = JsonConvert.DeserializeObject<TokenModel>(Intent.GetStringExtra("token"));
+            var user = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+
             drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 
             // Initialize toolbar
@@ -52,7 +57,7 @@ namespace My_Band
             drawerLayout.AddDrawerListener(drawerToggle);
             drawerToggle.SyncState();
 
-            FnInitTabLayout();
+            FnInitTabLayout(token, user);
             //Load default screen
             /*var ft = SupportFragmentManager.BeginTransaction();
             ft.AddToBackStack(null);
@@ -89,7 +94,7 @@ namespace My_Band
             drawerLayout.CloseDrawers();
         }
 
-        void FnInitTabLayout()
+        void FnInitTabLayout(TokenModel token, UserModel user)
         {
             tabLayout.SetTabTextColors(Android.Graphics.Color.Aqua, Android.Graphics.Color.AntiqueWhite);
             //Fragment array
@@ -99,6 +104,23 @@ namespace My_Band
                 new NotificationsFragment(),
                 new UserProfileFragment(),
             };
+            Bundle args = new Bundle();
+            args.PutString("Token", JsonConvert.SerializeObject(token));
+            //args.PutString("Token_Type", token.Token_Type);
+            //args.PutString("Refresh_Token", token.Refresh_Token);
+            //args.PutString("Access_Token", token.Access_Token);
+            //args.PutString("Expires_In", token.Expires_In);
+            args.PutString("user", JsonConvert.SerializeObject(user));
+            //passing token to all the fragments
+            int c = fragments.Count();
+            for(int i = 0; i < c; i++)
+            {
+                fragments[i].Arguments = args;
+            }
+            
+            FragmentManager.BeginTransaction()
+                .AddToBackStack(null)
+                .Commit();
             //Tab title array
             var titles = CharSequence.ArrayFromStringArray(new[] {
                 GetString(Resource.String.strCall),
@@ -111,6 +133,7 @@ namespace My_Band
 
             // Give the TabLayout the ViewPager 
             tabLayout.SetupWithViewPager(viewPager);
+            
             //tabLayout.SetTabTextColors(
             FnSetIcons();
             //FnSetupTabIconsWithText ();
