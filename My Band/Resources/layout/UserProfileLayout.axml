@@ -7,7 +7,7 @@
     <ScrollView
         android:orientation="vertical"
         android:layout_height="match_parent"
-        android:layout_width="match_parent"></ScrollView>
+        android:layout_width="match_parent" />
     <RelativeLayout
         android:id="@+id/rlProfileHeader"
         android:layout_width="match_parent"

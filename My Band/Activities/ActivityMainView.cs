@@ -25,8 +25,7 @@ namespace My_Band
     {
         DrawerLayout drawerLayout;
         TabLayout tabLayout;
-        //Button mBtnAddBand;
-        
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -46,8 +45,7 @@ namespace My_Band
             SupportActionBar.SetDisplayShowHomeEnabled(true);
 
             tabLayout = FindViewById<TabLayout>(Resource.Id.sliding_tabsIcon);
-
-
+            
             // Attach item selected handler to navigation view
             var navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.NavigationItemSelected += NavigationView_NavigationItemSelected;
@@ -56,19 +54,10 @@ namespace My_Band
             var drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, Resource.String.open_drawer, Resource.String.close_drawer);
             drawerLayout.AddDrawerListener(drawerToggle);
             drawerToggle.SyncState();
-
+            
             FnInitTabLayout(token, user);
-            //Load default screen
-            /*var ft = SupportFragmentManager.BeginTransaction();
-            ft.AddToBackStack(null);
-            ft.Add(Resource.Id.FrameLayout, new IconTextCallFragment());
-            ft.Commit();*/
-
-            //Trata os eventos dos cliques editar perfil
-            /*mBtnAddBand = FindViewById<Button>(Resource.Id.btnAddBand);
-            mBtnAddBand.Click += mBtnEditProfile_Click;*/
-
         }
+        
         //click do botão inserir banda
         private void mBtnEditProfile_Click(object sender, EventArgs e)
         {
@@ -113,11 +102,11 @@ namespace My_Band
             args.PutString("user", JsonConvert.SerializeObject(user));
             //passing token to all the fragments
             int c = fragments.Count();
-            for(int i = 0; i < c; i++)
+            for (int i = 0; i < c; i++)
             {
                 fragments[i].Arguments = args;
             }
-            
+
             FragmentManager.BeginTransaction()
                 .AddToBackStack(null)
                 .Commit();
@@ -133,7 +122,7 @@ namespace My_Band
 
             // Give the TabLayout the ViewPager 
             tabLayout.SetupWithViewPager(viewPager);
-            
+
             //tabLayout.SetTabTextColors(
             FnSetIcons();
             //FnSetupTabIconsWithText ();
