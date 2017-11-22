@@ -21,7 +21,7 @@ namespace My_Band.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            //SetContentView(Resource.Layout.EditProfileLayout);
+           
 
         }
     }

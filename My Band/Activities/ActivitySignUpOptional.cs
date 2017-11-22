@@ -111,7 +111,7 @@ namespace My_Band.Activities
 
         private async void mBtnSubmit_Click(object sender, EventArgs e)
         {
- 
+
             mEtState = FindViewById<EditText>(Resource.Id.etState).Text;
             mEtCity = FindViewById<EditText>(Resource.Id.etCity).Text;
             mEtPhone = FindViewById<EditText>(Resource.Id.etPhone).Text;
@@ -120,12 +120,12 @@ namespace My_Band.Activities
             mUser = new UserModel();
 
             mUser = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
-            
+
             mUser.State = mEtState;
             mUser.City = mEtCity;
             mUser.Phone = mEtPhone;
             mUser.About = mEtAbout;
-            
+
 
 
             Intent intent = new Intent(this, typeof(ActivityMainView));
@@ -138,11 +138,12 @@ namespace My_Band.Activities
             {
                 UserLoginModel userLogin = new UserLoginModel()
                 {
-                    username = mUser.Email,
+                    username = mUser.Name,
                     password = mUser.Password
                 };
 
                 var token = await dataService.PostLogin(userLogin);
+
                 if (token != null)
                 {
                     intent.PutExtra("token", JsonConvert.SerializeObject(token));
@@ -157,7 +158,7 @@ namespace My_Band.Activities
             }
             else
             {
-                
+
             }
 
         }
