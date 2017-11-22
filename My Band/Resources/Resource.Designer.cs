@@ -2201,238 +2201,280 @@ namespace My_Band
 			public const int aliados = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int avd_hide_password = 2130837591;
+			public const int arcadefire = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int avd_show_password = 2130837592;
+			public const int arcticmonkeys = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int background_purple_2 = 2130837593;
+			public const int avd_hide_password = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int banda = 2130837594;
+			public const int avd_show_password = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int bandahonra = 2130837595;
+			public const int background_purple_2 = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int bands4 = 2130837596;
+			public const int banda = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int ButtonNextSignUpStyle = 2130837597;
+			public const int bandahonra = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int ButtonRegister = 2130837598;
+			public const int bands4 = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ButtonSignInFacebookStyle = 2130837599;
+			public const int ButtonNextSignUpStyle = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ButtonSignUpStyle = 2130837600;
+			public const int ButtonRegister = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int ButtonsUserProfile = 2130837601;
+			public const int ButtonSignInFacebookStyle = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int cbjr = 2130837602;
+			public const int ButtonSignUpStyle = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int cpm22 = 2130837603;
+			public const int ButtonsUserProfile = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int design_bottom_navigation_item_background = 2130837604;
+			public const int cbjr = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int design_fab_background = 2130837605;
+			public const int cpm22 = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int design_ic_visibility = 2130837606;
+			public const int deathcabforcutie = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int design_ic_visibility_off = 2130837607;
+			public const int design_bottom_navigation_item_background = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int design_password_eye = 2130837608;
+			public const int design_fab_background = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int design_snackbar_background = 2130837609;
+			public const int design_ic_visibility = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int direita = 2130837610;
+			public const int design_ic_visibility_off = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int edit = 2130837611;
+			public const int design_password_eye = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int edit_text_style = 2130837612;
+			public const int design_snackbar_background = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int EditTextErrorStyle = 2130837613;
+			public const int direita = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int esque = 2130837614;
+			public const int edit = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int esquerd = 2130837615;
+			public const int edit_text_style = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int esquerda = 2130837616;
+			public const int EditTextErrorStyle = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int facebookiconRed = 2130837617;
+			public const int esque = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_call = 2130837618;
+			public const int esquerd = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_chang_lang = 2130837619;
+			public const int esquerda = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int ic_conf_pay = 2130837620;
+			public const int facebookiconRed = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_edit = 2130837621;
+			public const int fatale = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int ic_exit = 2130837622;
+			public const int fresno = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int ic_goBack = 2130837623;
+			public const int ic_call = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int ic_help = 2130837624;
+			public const int ic_chang_lang = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int ic_home = 2130837625;
+			public const int ic_conf_pay = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int ic_home_black_24dp = 2130837626;
+			public const int ic_edit = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int ic_info = 2130837627;
+			public const int ic_exit = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int ic_messages = 2130837628;
+			public const int ic_goBack = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int ic_msg = 2130837629;
+			public const int ic_help = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int ic_notification = 2130837630;
+			public const int ic_home = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int ic_notificationt = 2130837631;
+			public const int ic_home_black_24dp = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int ic_privacy_op = 2130837632;
+			public const int ic_info = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int ic_question_answer_black_24dp = 2130837633;
+			public const int ic_messages = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int ic_rate = 2130837634;
+			public const int ic_msg = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int ic_user = 2130837635;
+			public const int ic_notification = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int ic_usert = 2130837636;
+			public const int ic_notificationt = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int ic_wifi = 2130837637;
+			public const int ic_privacy_op = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int iconCall = 2130837638;
+			public const int ic_question_answer_black_24dp = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int iconData = 2130837639;
+			public const int ic_rate = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int iconMsg = 2130837640;
+			public const int ic_user = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int imgBg = 2130837641;
+			public const int ic_usert = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int leftArrow = 2130837642;
+			public const int ic_wifi = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int materialDesignBG = 2130837643;
+			public const int iconCall = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int money = 2130837644;
+			public const int iconData = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int mybandicon = 2130837645;
+			public const int iconMsg = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int navigation_empty_icon = 2130837646;
+			public const int imgBg = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int notification_action_background = 2130837647;
+			public const int leftArrow = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int notification_bg = 2130837648;
+			public const int malta = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int notification_bg_low = 2130837649;
+			public const int materialDesignBG = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int notification_bg_low_normal = 2130837650;
+			public const int modestmouse = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int notification_bg_low_pressed = 2130837651;
+			public const int money = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int notification_bg_normal = 2130837652;
+			public const int mybandicon = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int notification_bg_normal_pressed = 2130837653;
+			public const int navigation_empty_icon = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int notification_icon_background = 2130837654;
-			
-			// aapt resource value: 0x7f0200a3
-			public const int notification_template_icon_bg = 2130837667;
-			
-			// aapt resource value: 0x7f0200a4
-			public const int notification_template_icon_low_bg = 2130837668;
+			public const int notification_action_background = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int notification_tile_bg = 2130837655;
+			public const int notification_bg = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int notify_panel_notification_icon_bg = 2130837656;
+			public const int notification_bg_low = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int plateias = 2130837657;
+			public const int notification_bg_low_normal = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int ratingbar = 2130837658;
+			public const int notification_bg_low_pressed = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int ratingbar_empty = 2130837659;
+			public const int notification_bg_normal = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int ratingbar_filled = 2130837660;
+			public const int notification_bg_normal_pressed = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int ratingbar_staroff = 2130837661;
+			public const int notification_icon_background = 2130837661;
+			
+			// aapt resource value: 0x7f0200b1
+			public const int notification_template_icon_bg = 2130837681;
+			
+			// aapt resource value: 0x7f0200b2
+			public const int notification_template_icon_low_bg = 2130837682;
 			
 			// aapt resource value: 0x7f02009e
-			public const int ratingbar_staron = 2130837662;
+			public const int notification_tile_bg = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int rightArrow = 2130837663;
+			public const int notify_panel_notification_icon_bg = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int rock = 2130837664;
+			public const int nxzero = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int semImagem = 2130837665;
+			public const int oficinag3 = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int venice = 2130837666;
+			public const int plateias = 2130837666;
+			
+			// aapt resource value: 0x7f0200a3
+			public const int radiohead = 2130837667;
+			
+			// aapt resource value: 0x7f0200a4
+			public const int ratingbar = 2130837668;
+			
+			// aapt resource value: 0x7f0200a5
+			public const int ratingbar_empty = 2130837669;
+			
+			// aapt resource value: 0x7f0200a6
+			public const int ratingbar_filled = 2130837670;
+			
+			// aapt resource value: 0x7f0200a7
+			public const int ratingbar_staroff = 2130837671;
+			
+			// aapt resource value: 0x7f0200a8
+			public const int ratingbar_staron = 2130837672;
+			
+			// aapt resource value: 0x7f0200a9
+			public const int rightArrow = 2130837673;
+			
+			// aapt resource value: 0x7f0200aa
+			public const int rock = 2130837674;
+			
+			// aapt resource value: 0x7f0200ab
+			public const int semImagem = 2130837675;
+			
+			// aapt resource value: 0x7f0200ac
+			public const int thekillers = 2130837676;
+			
+			// aapt resource value: 0x7f0200ad
+			public const int theredundants = 2130837677;
+			
+			// aapt resource value: 0x7f0200ae
+			public const int theshins = 2130837678;
+			
+			// aapt resource value: 0x7f0200af
+			public const int thestrokes = 2130837679;
+			
+			// aapt resource value: 0x7f0200b0
+			public const int venice = 2130837680;
 			
 			static Drawable()
 			{
@@ -2543,11 +2585,11 @@ namespace My_Band
 			// aapt resource value: 0x7f070028
 			public const int bottom = 2131165224;
 			
-			// aapt resource value: 0x7f0700fd
-			public const int btnAddBand = 2131165437;
+			// aapt resource value: 0x7f070102
+			public const int btnAddBand = 2131165442;
 			
-			// aapt resource value: 0x7f0700fc
-			public const int btnEditProfile = 2131165436;
+			// aapt resource value: 0x7f070101
+			public const int btnEditProfile = 2131165441;
 			
 			// aapt resource value: 0x7f0700d2
 			public const int btnExplore = 2131165394;
@@ -2720,9 +2762,6 @@ namespace My_Band
 			// aapt resource value: 0x7f070013
 			public const int homeAsUp = 2131165203;
 			
-			// aapt resource value: 0x7f070101
-			public const int hsvLikedBands = 2131165441;
-			
 			// aapt resource value: 0x7f0700d4
 			public const int hsvSuggestedBands = 2131165396;
 			
@@ -2759,14 +2798,17 @@ namespace My_Band
 			// aapt resource value: 0x7f07007b
 			public const int imageView6 = 2131165307;
 			
+			// aapt resource value: 0x7f0700f6
+			public const int imageViewNotification = 2131165430;
+			
 			// aapt resource value: 0x7f0700ec
 			public const int info = 2131165420;
 			
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_previous_elevation = 2131165184;
 			
-			// aapt resource value: 0x7f0700f8
-			public const int ivProfilePicture = 2131165432;
+			// aapt resource value: 0x7f0700fd
+			public const int ivProfilePicture = 2131165437;
 			
 			// aapt resource value: 0x7f07009d
 			public const int ivRegisterBack = 2131165341;
@@ -2834,8 +2876,8 @@ namespace My_Band
 			// aapt resource value: 0x7f07004b
 			public const int list_item = 2131165259;
 			
-			// aapt resource value: 0x7f070100
-			public const int llConteinerLikedBands = 2131165440;
+			// aapt resource value: 0x7f070105
+			public const int llConteinerLikedBands = 2131165445;
 			
 			// aapt resource value: 0x7f07009f
 			public const int llForm1 = 2131165343;
@@ -2843,11 +2885,14 @@ namespace My_Band
 			// aapt resource value: 0x7f0700b2
 			public const int llForm2 = 2131165362;
 			
-			// aapt resource value: 0x7f0700fe
-			public const int llProfileBody = 2131165438;
-			
 			// aapt resource value: 0x7f070103
-			public const int masked = 2131165443;
+			public const int llProfileBody = 2131165443;
+			
+			// aapt resource value: 0x7f0700fb
+			public const int llUserProfileBody = 2131165435;
+			
+			// aapt resource value: 0x7f070107
+			public const int masked = 2131165447;
 			
 			// aapt resource value: 0x7f0700e5
 			public const int media_actions = 2131165413;
@@ -2864,17 +2909,17 @@ namespace My_Band
 			// aapt resource value: 0x7f070019
 			public const int multiply = 2131165209;
 			
-			// aapt resource value: 0x7f070107
-			public const int nav_SearchApartment = 2131165447;
+			// aapt resource value: 0x7f07010b
+			public const int nav_SearchApartment = 2131165451;
 			
-			// aapt resource value: 0x7f070106
-			public const int nav_friends = 2131165446;
+			// aapt resource value: 0x7f07010a
+			public const int nav_friends = 2131165450;
 			
-			// aapt resource value: 0x7f070104
-			public const int nav_home = 2131165444;
+			// aapt resource value: 0x7f070108
+			public const int nav_home = 2131165448;
 			
-			// aapt resource value: 0x7f070105
-			public const int nav_messages = 2131165445;
+			// aapt resource value: 0x7f070109
+			public const int nav_messages = 2131165449;
 			
 			// aapt resource value: 0x7f0700de
 			public const int nav_view = 2131165406;
@@ -2909,11 +2954,11 @@ namespace My_Band
 			// aapt resource value: 0x7f070038
 			public const int pin = 2131165240;
 			
-			// aapt resource value: 0x7f0700fb
-			public const int profileContainerButtons = 2131165435;
+			// aapt resource value: 0x7f070100
+			public const int profileContainerButtons = 2131165440;
 			
-			// aapt resource value: 0x7f0700ff
-			public const int profileLikedBands = 2131165439;
+			// aapt resource value: 0x7f070104
+			public const int profileLikedBands = 2131165444;
 			
 			// aapt resource value: 0x7f070006
 			public const int progress_circular = 2131165190;
@@ -2924,8 +2969,11 @@ namespace My_Band
 			// aapt resource value: 0x7f070060
 			public const int radio = 2131165280;
 			
-			// aapt resource value: 0x7f0700f6
-			public const int ratingBar1 = 2131165430;
+			// aapt resource value: 0x7f0700f9
+			public const int ratingBar1 = 2131165433;
+			
+			// aapt resource value: 0x7f0700f7
+			public const int relativeLayoutNotification = 2131165431;
 			
 			// aapt resource value: 0x7f070043
 			public const int repeat = 2131165251;
@@ -2951,8 +2999,8 @@ namespace My_Band
 			// aapt resource value: 0x7f0700af
 			public const int rlHeaderOptionalRegister = 2131165359;
 			
-			// aapt resource value: 0x7f0700f7
-			public const int rlProfileHeader = 2131165431;
+			// aapt resource value: 0x7f0700fc
+			public const int rlProfileHeader = 2131165436;
 			
 			// aapt resource value: 0x7f0700d3
 			public const int rlSuggestedBands = 2131165395;
@@ -3068,6 +3116,9 @@ namespace My_Band
 			// aapt resource value: 0x7f0700a0
 			public const int svForm2 = 2131165344;
 			
+			// aapt resource value: 0x7f0700fa
+			public const int svVerticalUserProfile = 2131165434;
+			
 			// aapt resource value: 0x7f070011
 			public const int tabMode = 2131165201;
 			
@@ -3124,6 +3175,9 @@ namespace My_Band
 			
 			// aapt resource value: 0x7f070094
 			public const int textView9 = 2131165332;
+			
+			// aapt resource value: 0x7f0700f8
+			public const int textViewNotificationDescription = 2131165432;
 			
 			// aapt resource value: 0x7f0700ce
 			public const int text_input_password_toggle = 2131165390;
@@ -3185,11 +3239,11 @@ namespace My_Band
 			// aapt resource value: 0x7f0700b9
 			public const int tvPhone = 2131165369;
 			
-			// aapt resource value: 0x7f0700fa
-			public const int tvProfileEmail = 2131165434;
+			// aapt resource value: 0x7f0700ff
+			public const int tvProfileEmail = 2131165439;
 			
-			// aapt resource value: 0x7f0700f9
-			public const int tvProfileUsername = 2131165433;
+			// aapt resource value: 0x7f0700fe
+			public const int tvProfileUsername = 2131165438;
 			
 			// aapt resource value: 0x7f0700ac
 			public const int tvRequiredConfirmPassword = 2131165356;
@@ -3230,8 +3284,8 @@ namespace My_Band
 			// aapt resource value: 0x7f0700c0
 			public const int viewpagerIcon = 2131165376;
 			
-			// aapt resource value: 0x7f070102
-			public const int visible = 2131165442;
+			// aapt resource value: 0x7f070106
+			public const int visible = 2131165446;
 			
 			// aapt resource value: 0x7f070027
 			public const int withText = 2131165223;

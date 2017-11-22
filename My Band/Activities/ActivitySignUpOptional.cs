@@ -136,7 +136,24 @@ namespace My_Band.Activities
 
             if (result == true)
             {
-                this.StartActivity(intent);
+                UserLoginModel userLogin = new UserLoginModel()
+                {
+                    username = mUser.Email,
+                    password = mUser.Password
+                };
+
+                var token = await dataService.PostLogin(userLogin);
+                if (token != null)
+                {
+                    intent.PutExtra("token", JsonConvert.SerializeObject(token));
+                    var user = await dataService.FindByName(userLogin.username, token);
+                    if (user != null)
+                    {
+                        intent.PutExtra("user", JsonConvert.SerializeObject(user));
+                        this.StartActivity(intent);
+                        this.Finish();
+                    }
+                }
             }
             else
             {
