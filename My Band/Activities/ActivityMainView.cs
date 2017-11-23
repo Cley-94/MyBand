@@ -25,6 +25,7 @@ namespace My_Band
     {
         DrawerLayout drawerLayout;
         TabLayout tabLayout;
+        //Button mBtnAddBand;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -45,7 +46,8 @@ namespace My_Band
             SupportActionBar.SetDisplayShowHomeEnabled(true);
 
             tabLayout = FindViewById<TabLayout>(Resource.Id.sliding_tabsIcon);
-            
+
+
             // Attach item selected handler to navigation view
             var navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.NavigationItemSelected += NavigationView_NavigationItemSelected;
@@ -54,10 +56,10 @@ namespace My_Band
             var drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, Resource.String.open_drawer, Resource.String.close_drawer);
             drawerLayout.AddDrawerListener(drawerToggle);
             drawerToggle.SyncState();
-            
+
             FnInitTabLayout(token, user);
+
         }
-        
         //click do botão inserir banda
         private void mBtnEditProfile_Click(object sender, EventArgs e)
         {
@@ -95,11 +97,8 @@ namespace My_Band
             };
             Bundle args = new Bundle();
             args.PutString("Token", JsonConvert.SerializeObject(token));
-            //args.PutString("Token_Type", token.Token_Type);
-            //args.PutString("Refresh_Token", token.Refresh_Token);
-            //args.PutString("Access_Token", token.Access_Token);
-            //args.PutString("Expires_In", token.Expires_In);
             args.PutString("user", JsonConvert.SerializeObject(user));
+
             //passing token to all the fragments
             int c = fragments.Count();
             for (int i = 0; i < c; i++)

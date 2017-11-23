@@ -1,62 +1,322 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="#EEEEEE"
     android:padding="8dp">
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp">
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            card_view:cardUseCompatPadding="false"
-            android:layout_margin="0dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:layout_height="225dp"
-            android:layout_gravity="center"
-            android:id="@+id/card"
-            card_view:cardElevation="8dp"
-            card_view:cardCornerRadius="2dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
+            android:clipToPadding="false">
+            <LinearLayout
                 android:orientation="vertical"
-                android:id="@+id/rlCardView">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:background="@drawable/bands4"
-                    android:id="@+id/imageView"
-                    android:scaleType="centerCrop" />
-                <TextView
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="90dp"
-                    android:layout_marginLeft="16dp"
-                    android:textSize="24sp"
-                    android:text="Bandas da semana"
-                    android:textColor="#FFFFFF" />
-            </RelativeLayout>
-            <TextView
+                android:layout_height="228dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="14sp"
-                android:layout_marginTop="150dp"
-                android:layout_marginLeft="16dp"
-                android:text="Conheça as bandas mais curtidas da semana!"
-                android:textColor="#000000" />
-            <Button
-                android:text="Explorar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+            <!--Cardview Bandas da Semana-->
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    card_view:cardUseCompatPadding="false"
+                    android:layout_margin="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="225dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/card"
+                    card_view:cardElevation="4dp"
+                    card_view:cardCornerRadius="2dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:orientation="vertical"
+                        android:id="@+id/rlCardView">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/bands4"
+                            android:id="@+id/imageView"
+                            android:scaleType="centerCrop" />
+                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="90dp"
+                            android:layout_marginLeft="16dp"
+                            android:textSize="24sp"
+                            android:text="Bandas da semana"
+                            android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="14sp"
+                        android:layout_marginTop="150dp"
+                        android:layout_marginLeft="16dp"
+                        android:text="Conheça as bandas mais curtidas da semana!"
+                        android:textColor="#000000" />
+                    <Button
+                        android:text="Explorar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="175dp"
+                        android:layout_marginLeft="240dp"
+                        android:textColor="#7b1fa2"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/btnExplore" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        <!--Cardview bandas sugeridas-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="235dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="175dp"
-                android:layout_marginLeft="240dp"
-                android:textColor="#51146c"
-                android:background="@android:color/transparent"
-                android:id="@+id/btnExplore"/>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    card_view:cardUseCompatPadding="false"
+                    android:layout_margin="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/card"
+                    card_view:cardElevation="4dp"
+                    card_view:cardCornerRadius="2dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:id="@+id/rlSuggestedBands"
+                        android:layout_marginTop="0dp">
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="16dp"
+                            android:textSize="24sp"
+                            android:text="Bandas sugeridas"
+                            android:textColor="#7b1fa2"
+                            android:id="@+id/textView2" />
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/hsvSuggestedBands"
+                            android:layout_marginLeft="16dp"
+                            android:scrollbars="none">
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="15dp">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/aliados"
+                                        android:id="@+id/imageView"
+                                        android:scaleType="centerCrop" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="14sp"
+                                        android:lines="2"
+                                        android:layout_margin="3dp"
+                                        android:text="Aliados"
+                                        android:textColor="#000000" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/bandahonra"
+                                        android:id="@+id/imageView"
+                                        android:scaleType="centerCrop" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="14sp"
+                                        android:lines="2"
+                                        android:layout_margin="3dp"
+                                        android:text="Honra Rock"
+                                        android:textColor="#000000" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/cbjr"
+                                        android:id="@+id/imageView"
+                                        android:scaleType="centerCrop" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="14sp"
+                                        android:lines="2"
+                                        android:layout_margin="3dp"
+                                        android:text="Charlie Brown Jr"
+                                        android:textColor="#000000" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/cpm22"
+                                        android:id="@+id/imageView"
+                                        android:scaleType="centerCrop" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="14sp"
+                                        android:lines="2"
+                                        android:layout_margin="3dp"
+                                        android:text="CPM 22"
+                                        android:textColor="#000000" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/venice"
+                                        android:id="@+id/imageView"
+                                        android:scaleType="centerCrop" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="14sp"
+                                        android:lines="2"
+                                        android:layout_margin="3dp"
+                                        android:text="Venice"
+                                        android:textColor="#000000" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/oficinag3"
+                                        android:id="@+id/imageView"
+                                        android:scaleType="centerCrop" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="14sp"
+                                        android:lines="2"
+                                        android:layout_margin="3dp"
+                                        android:text="Oficina G3"
+                                        android:textColor="#000000" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/malta"
+                                        android:id="@+id/imageView"
+                                        android:scaleType="centerCrop" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="14sp"
+                                        android:lines="2"
+                                        android:layout_margin="3dp"
+                                        android:text="Malta"
+                                        android:textColor="#000000" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/fatale"
+                                        android:id="@+id/imageView"
+                                        android:scaleType="centerCrop" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="14sp"
+                                        android:lines="2"
+                                        android:layout_margin="3dp"
+                                        android:text="Fatale"
+                                        android:textColor="#000000" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/nxzero"
+                                        android:id="@+id/imageView"
+                                        android:scaleType="centerCrop" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="14sp"
+                                        android:lines="2"
+                                        android:layout_margin="3dp"
+                                        android:text="NX Zero"
+                                        android:textColor="#000000" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/fresno"
+                                        android:id="@+id/imageView"
+                                        android:scaleType="centerCrop" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="14sp"
+                                        android:lines="2"
+                                        android:layout_margin="3dp"
+                                        android:text="Fresno"
+                                        android:textColor="#000000" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

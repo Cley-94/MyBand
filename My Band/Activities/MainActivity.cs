@@ -20,8 +20,8 @@ using Newtonsoft.Json;
 
 namespace My_Band
 {
-    [Activity(Label = "My Band Altogether", MainLauncher = true , Icon ="@drawable/mybandicon")]
-    public class MainActivity : Activity 
+    [Activity(Label = "My Band Altogether", MainLauncher = true, Icon = "@drawable/mybandicon")]
+    public class MainActivity : Activity
     {
         DataServiceAPI dataService;
         private Button mBtnLogIn;
@@ -60,11 +60,12 @@ namespace My_Band
 
             if (!string.IsNullOrEmpty(mEtEmail) || !string.IsNullOrEmpty(mEtPassword))
             {
-                UserLoginModel userLogin = new UserLoginModel() {
+                UserLoginModel userLogin = new UserLoginModel()
+                {
                     username = mEtEmail,
                     password = mEtPassword
                 };
-                
+
                 var token = await dataService.PostLogin(userLogin);
                 //bool result = true;
                 if (token != null)
@@ -73,7 +74,7 @@ namespace My_Band
                     Intent intent = new Intent(this, typeof(ActivityMainView));
                     intent.PutExtra("token", JsonConvert.SerializeObject(token));
                     var user = await dataService.FindByName(userLogin.username, token);
-                    if(user != null)
+                    if (user != null)
                     {
                         intent.PutExtra("user", JsonConvert.SerializeObject(user));
                         this.StartActivity(intent);

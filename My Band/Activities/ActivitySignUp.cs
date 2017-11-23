@@ -23,17 +23,17 @@ namespace My_Band
         private Button mBtnNext;
         private ImageView mBtnRegisterBack;
         private LinearLayout mLinearLayout;
-        
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Cadastro);
 
-            
+
             mBtnNext = FindViewById<Button>(Resource.Id.btnNext);
             mBtnNext.Click += mBtnNext_Click;
-            
+
             mLinearLayout = FindViewById<LinearLayout>(Resource.Id.RegisterLinearLayout);
             mLinearLayout.Click += mLinearLayout_Click;
 
@@ -42,7 +42,7 @@ namespace My_Band
 
         }
 
-        
+
         private void mLinearLayout_Click(object sender, EventArgs e)
         {
             InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Activity.InputMethodService);
@@ -132,9 +132,9 @@ namespace My_Band
                 intent.PutExtra("user", JsonConvert.SerializeObject(user));
                 this.StartActivity(intent);
             }
-            
+
         }
-        
+
         private void mBtnRegisterBack_Click(object sender, EventArgs e)
         {
 

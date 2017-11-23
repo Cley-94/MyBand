@@ -3,125 +3,242 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0c0414">
+    android:background="#EEEEEE">
     <ScrollView
-        android:orientation="vertical"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent" />
-    <RelativeLayout
-        android:id="@+id/rlProfileHeader"
-        android:layout_width="match_parent"
-        android:layout_height="115dp">
-        <ImageView
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/ivProfilePicture" />
-        <TextView
-            android:text="Username"
-            android:textColor="#e5e5e5"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@id/ivProfilePicture"
-            android:layout_marginBottom="40dp"
-            android:layout_marginLeft="15dp"
-            android:textSize="20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvProfileUsername" />
-        <TextView
-            android:text="Email"
-            android:textColor="#e5e5e5"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@id/ivProfilePicture"
-            android:layout_marginLeft="15dp"
-            android:layout_marginBottom="10dp"
-            android:textSize="20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvProfileEmail" />
-    </RelativeLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:id="@+id/profileContainerButtons"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
         android:minWidth="25px"
         android:minHeight="25px"
-        android:weightSum="100">
-        <Button
-            android:text="Editar Perfil"
-            android:textColor="#e5e5e5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnEditProfile"
-            android:background="@drawable/ButtonsUserProfile"
-            android:layout_weight="50"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-        <Button
-            android:text="Adicinar Banda"
-            android:textColor="#e5e5e5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnAddBand"
-            android:background="@drawable/ButtonsUserProfile"
-            android:layout_weight="50"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:id="@+id/llProfileBody"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:minWidth="25px"
-        android:minHeight="25px">
-        <TextView
-            android:text="Bandas Curtidas"
-            android:textColor="#cccccc"
-            android:layout_width="match_parent"
+        android:id="@+id/svVerticalUserProfile">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="30dp"
-            android:id="@+id/profileLikedBands" />
-        <RelativeLayout
-            android:layout_height="120dp"
             android:layout_width="match_parent"
-            android:id="@+id/llConteinerLikedBands">
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/hsvLikedBands">
-                <LinearLayout
+            android:id="@+id/llUserProfileBody">
+            <RelativeLayout
+                android:id="@+id/rlProfileHeader"
+                android:layout_width="match_parent"
+                android:layout_height="115dp">
+                <ImageView
+                    android:background="@drawable/cleiton2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/ivProfilePicture" />
+                <TextView
+                    android:text="Username"
+                    android:textColor="#000000"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/ivProfilePicture"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content">
-                    <ImageView
-                        android:src="@android:drawable/ic_menu_gallery"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="10dp" />
-                    <ImageView
-                        android:src="@android:drawable/ic_menu_gallery"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="10dp" />
-                    <ImageView
-                        android:src="@android:drawable/ic_menu_gallery"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="10dp" />
-                    <ImageView
-                        android:src="@android:drawable/ic_menu_gallery"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="10dp" />
+                    android:id="@+id/tvProfileUsername" />
+                <TextView
+                    android:text="Email"
+                    android:textColor="#000000"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/ivProfilePicture"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvProfileEmail" />
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/profileContainerButtons"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:weightSum="100">
+                <Button
+                    android:text="Editar Perfil"
+                    android:textColor="#E5E5E5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnEditProfile"
+                    android:background="@drawable/ButtonStyleDefault"
+                    android:layout_weight="50"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+                <Button
+                    android:text="Adicionar Banda"
+                    android:textColor="#E5E5E5"
+                    android:radius="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnAddBand"
+                    android:background="@drawable/ButtonStyleDefault"
+                    android:layout_weight="50"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/llProfileBody"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px">
+                <TextView
+                    android:text="Bandas Curtidas"
+                    android:textColor="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/profileLikedBands" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/LikeddBands">
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hsvLikedBands"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="15dp"
+                        android:scrollbars="none">
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="15dp">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent">
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/aliados"
+                                    android:id="@+id/imageView"
+                                    android:scaleType="centerCrop" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14sp"
+                                    android:lines="2"
+                                    android:layout_margin="3dp"
+                                    android:text="Aliados"
+                                    android:textColor="#000000" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent">
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/bandahonra"
+                                    android:id="@+id/imageView"
+                                    android:scaleType="centerCrop" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14sp"
+                                    android:lines="2"
+                                    android:layout_margin="3dp"
+                                    android:text="Honra Rock"
+                                    android:textColor="#000000" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent">
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/cbjr"
+                                    android:id="@+id/imageView"
+                                    android:scaleType="centerCrop" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14sp"
+                                    android:lines="2"
+                                    android:layout_margin="3dp"
+                                    android:text="Charlie Brown Jr"
+                                    android:textColor="#000000" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent">
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/oficinag3"
+                                    android:id="@+id/imageView"
+                                    android:scaleType="centerCrop" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14sp"
+                                    android:lines="2"
+                                    android:layout_margin="3dp"
+                                    android:text="Oficina G3"
+                                    android:textColor="#000000" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent">
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/fatale"
+                                    android:id="@+id/imageView"
+                                    android:scaleType="centerCrop" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14sp"
+                                    android:lines="2"
+                                    android:layout_margin="3dp"
+                                    android:text="Fatale"
+                                    android:textColor="#000000" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent">
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/cpm22"
+                                    android:id="@+id/imageView"
+                                    android:scaleType="centerCrop" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14sp"
+                                    android:lines="2"
+                                    android:layout_margin="3dp"
+                                    android:text="CPM 22"
+                                    android:textColor="#000000" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
                 </LinearLayout>
-            </HorizontalScrollView>
-        </RelativeLayout>
-    </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
