@@ -15,11 +15,13 @@ using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Support.V4.Widget;
 using My_Band.DataService;
+using My_Band.Models;
+using Newtonsoft.Json;
 
 namespace My_Band
 {
-    [Activity(Label = "My Band Altogether", MainLauncher = true , Icon ="@drawable/mybandicon")]
-    public class MainActivity : Activity 
+    [Activity(Label = "My Band Altogether", MainLauncher = true, Icon = "@drawable/mybandicon")]
+    public class MainActivity : Activity
     {
         DataServiceAPI dataService;
         private Button mBtnLogIn;
@@ -56,21 +58,34 @@ namespace My_Band
             mEtPassword = FindViewById<EditText>(Resource.Id.etPasswordLogin).Text;
             mTvErrorLogin = FindViewById<TextView>(Resource.Id.tvErrorLogin);
 
-            Models.UserLoginModel userLogin = new Models.UserLoginModel() {
-                EmailLogin = mEtEmail,
-                PasswordLogin = mEtPassword
-            };
-
-            bool result = await dataService.PostLogin(userLogin);
-            if (result == true)
+            if (!string.IsNullOrEmpty(mEtEmail) || !string.IsNullOrEmpty(mEtPassword))
             {
-                mTvErrorLogin.Text = "";
-                Intent intent = new Intent(this, typeof(ActivityMainView));
-                this.StartActivity(intent);
-                this.Finish();
+                UserLoginModel userLogin = new UserLoginModel()
+                {
+                    username = mEtEmail,
+                    password = mEtPassword
+                };
+
+                var token = await dataService.PostLogin(userLogin);
+                //bool result = true;
+                if (token != null)
+                {
+                    mTvErrorLogin.Text = "";
+                    Intent intent = new Intent(this, typeof(ActivityMainView));
+                    intent.PutExtra("token", JsonConvert.SerializeObject(token));
+                    var user = await dataService.FindByName(userLogin.username, token);
+                    if (user != null)
+                    {
+                        intent.PutExtra("user", JsonConvert.SerializeObject(user));
+                        this.StartActivity(intent);
+                        this.Finish();
+                    }
+                }
+                else
+                    mTvErrorLogin.Text = "Email ou senha incorretos";
             }
             else
-                mTvErrorLogin.Text = "Email ou senha incorretos";
+                mTvErrorLogin.Text = "Preencha os dois campos";
         }
     }
 }

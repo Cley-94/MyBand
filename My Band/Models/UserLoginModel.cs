@@ -14,7 +14,7 @@ namespace My_Band.Models
 {
     public class UserLoginModel
     {
-        public String EmailLogin { get; set; }
-        public String PasswordLogin { get; set; }
+        public String username { get; set; }
+        public String password { get; set; }
     }
 }

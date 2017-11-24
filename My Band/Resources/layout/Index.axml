@@ -36,7 +36,7 @@
         android:gravity="center_horizontal"
         android:id="@+id/tvErrorLogin"
         android:textColor="#8a0001"
-        android:textSize="12sp"/>
+        android:textSize="12sp" />
     <Button
         android:text="Entrar"
         android:textColor="#ffffff"
